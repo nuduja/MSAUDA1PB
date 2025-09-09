@@ -4,3 +4,6 @@ python3 test_sanity/check_submission.py
 
 run all task 1 test cases
 python -m unittest discover -s testcases -p "test_task1_*.py" -v
+
+run all task 2 test cases
+python -m unittest discover -s testcases -p "test_task2_*.py" -v
