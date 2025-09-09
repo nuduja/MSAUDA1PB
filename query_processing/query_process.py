@@ -14,9 +14,10 @@ def convert_natural_language(nl_query: str) -> str:
     Returns:
         Boolean query string with OR operators (e.g., "a OR b OR c").
     """
-    # Assume nl_query is already cleaned/lowercased in test cases
-    # Split on whitespace and keep tokens as-is
-    pass
+    if not isinstance(nl_query, str):
+        return ""
+    toks = [t for t in nl_query.strip().split() if t]
+    return " OR ".join(toks)
 
 def process_query(query: str, index_path: str) -> Set[int]:
     """
